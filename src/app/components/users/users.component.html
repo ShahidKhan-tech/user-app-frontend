@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
+      <app-user-card [user]="user"></app-user-card>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isLoading">
+  <hr />
+  <h2>Loading......</h2>
+</div>
+<div *ngIf="users?.length === 0 && !isLoading">
+  <hr />
+  <h2>There is no user.start adding some user.</h2>
+</div>

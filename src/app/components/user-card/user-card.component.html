@@ -1,0 +1,21 @@
+<div class="card mb-4">
+  <div class="card -img-wrapper">
+    <img
+      class="card-img-top"
+      src="../../../assets/user-img.png"
+      alt="user-image"
+    />
+  </div>
+  <div class="card-body p-1">
+    <h6 class="cardt-title text-center mb-1">
+      <i class="fa fa-user"></i>
+      {{ user.name }}
+    </h6>
+    <button
+      [routerLink]="['/userDetail', user._id]"
+      class="card-text btn btn-block btn-primary text-center"
+    >
+      details
+    </button>
+  </div>
+</div>
